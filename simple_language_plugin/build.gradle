@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id "org.jetbrains.intellij" version "0.4.2"
+}
+
+apply plugin: 'idea'
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'java'
+
+intellij {
+    version 'IC-2016.3'
+    plugins 'coverage'
+    pluginName 'simple_language_plugin'
+}
+
+group 'org.jetbrains'
+version '1.2'
+
