@@ -9,13 +9,46 @@ plugins {
 }
 
 apply plugin: 'idea'
+idea {
+    module {
+        generatedSourceDirs += file('gen')
+    }
+}
+
 apply plugin: 'org.jetbrains.intellij'
+
 apply plugin: 'java'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ["src"]
+			srcDirs = ["gen"]
+			srcDir 'src/com/simpleplugin/'
+			srcDir 'src/com/simpleplugin/icons'
+			srcDir 'src/com/simpleplugin/psi'
+			srcDir 'src/com/simpleplugin/psi/impl'
+			srcDir 'resources/'
+			srcDir 'resources/META-INF'
+        }
+		resources{
+			srcDir 'resources/'
+		}
+    }
+}
+
+patchPluginXml {
+	sinceBuild '162'
+    untilBuild '191'
+}
 
 intellij {
-    version 'IC-2016.3'
+    version "IC-2018.3.4"
     plugins 'coverage'
     pluginName 'simple_language_plugin'
+
 }
 
 group 'org.jetbrains'
