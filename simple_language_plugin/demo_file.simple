@@ -16,3 +16,6 @@ key\ with\ spaces = This is the value that could be looked up with the key "key 
 tab :\u0009
 
 ~Now that we've modified the plugin, the #s are no longer comments, and now tildes are!
+
+Sam: A comment from Sam!
+Andi: A comment from Andi.
