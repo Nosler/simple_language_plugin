@@ -24,14 +24,10 @@ targetCompatibility = 1.8
 sourceSets {
     main {
         java {
-            srcDirs = ["src"]
-			srcDirs = ["gen"]
-			srcDir 'src/com/simpleplugin/'
-			srcDir 'src/com/simpleplugin/icons'
-			srcDir 'src/com/simpleplugin/psi'
-			srcDir 'src/com/simpleplugin/psi/impl'
-			srcDir 'resources/'
-			srcDir 'resources/META-INF'
+            srcDirs = ["gen"]
+            srcDir 'src/com/simpleplugin/'
+            srcDir 'src/com/simpleplugin/psi'
+            srcDir 'src/com/simpleplugin/psi/impl'
         }
 		resources{
 			srcDir 'resources/'
