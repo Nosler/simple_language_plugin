@@ -2,20 +2,21 @@
 
 # This is a comment.
 ! The exclamation mark can also mark comments.
+
+# But now we also have personalized comments!
+Sam: A comment from Sam!
+Andi: A comment from Andi!
+
+
 key=value
 website=http://en.wikipedia.org/
 
 language= English
-# The backslash below tells the application to continue reading
-# the value onto the next line.
+# The backslash below tells the application to continue reading the value onto the next line.
 message  =  Welcome to \
           Wikipedia!
+
 # Add spaces to the key
 key\ with\ spaces = This is the value that could be looked up with the key "key with spaces".
 # Unicode
 tab :\u0009
-
-~Now that we've modified the plugin, the #s are no longer comments, and now tildes are!
-
-Sam: A comment from Sam!
-Andi: A comment from Andi.

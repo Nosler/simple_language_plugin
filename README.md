@@ -1,8 +1,8 @@
 # CIS407: IDE Extension Plugins
 
-Plugin extending JetBrains IDEs.
+Sandbox for working on plugins extending JetBrains IDEs.
 
-#Authors:
+## Authors:
 
 Andi Nosler
 
