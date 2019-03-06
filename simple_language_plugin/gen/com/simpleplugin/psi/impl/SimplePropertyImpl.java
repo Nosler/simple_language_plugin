@@ -13,7 +13,7 @@ import com.intellij.navigation.ItemPresentation;
 
 public class SimplePropertyImpl extends SimpleNamedElementImpl implements SimpleProperty {
 
-  public SimplePropertyImpl(ASTNode node) {
+  public SimplePropertyImpl(@NotNull ASTNode node) {
     super(node);
   }
 

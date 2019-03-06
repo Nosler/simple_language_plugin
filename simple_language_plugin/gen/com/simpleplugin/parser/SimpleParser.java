@@ -81,11 +81,9 @@ public class SimpleParser implements PsiParser, LightPsiParser {
   private static boolean recover_property_0(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "recover_property_0")) return false;
     boolean r;
-    Marker m = enter_section_(b);
     r = consumeToken(b, KEY);
     if (!r) r = consumeToken(b, SEPARATOR);
     if (!r) r = consumeToken(b, COMMENT);
-    exit_section_(b, m, null, r);
     return r;
   }
 
@@ -93,11 +91,10 @@ public class SimpleParser implements PsiParser, LightPsiParser {
   // (property|COMMENT)*
   static boolean simpleFile(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "simpleFile")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!simpleFile_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "simpleFile", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -113,7 +110,7 @@ public class SimpleParser implements PsiParser, LightPsiParser {
     return r;
   }
 
-  final static Parser recover_property_parser_ = new Parser() {
+  static final Parser recover_property_parser_ = new Parser() {
     public boolean parse(PsiBuilder b, int l) {
       return recover_property(b, l + 1);
     }
