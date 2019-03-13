@@ -8,8 +8,8 @@ Andrea Nosler
 
 This is a minimal target for an IntelliJ IDEA plugin. This plugin could act as a starting point to implement a more 
 complicated grammar, as this project demonstrates the bare necessities that a language plugin requires.
-These bare necessities include a grammar, a lexer, associated Java files, and a Gradle file. This plugin also
-demonstrates custom file extension support, as well as custom icons associated with file types. We have also
+These bare necessities include a grammar, a lexer, associated Java files, and a Gradle file. This plugin includes
+syntax hightlighting, custom file extension support, as well as custom icons associated with file types. We have also
 made a minor change to the lexer that extends what types of strings are recognized as commends, 
 demonstrating how powerful the lexer tool is at customizing a plugin.
 
