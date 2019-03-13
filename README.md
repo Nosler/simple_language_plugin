@@ -1,5 +1,7 @@
 # CIS407: IDE Extension Plugins
 
+This is a minimal target for an IntelliJ IDEA plugin. This should act as a starting point to implement a more complicated grammar, as this project demonstrates the bare necessities that a language plugin requires. The bare necessities include a grammar, a lexer, associated Java files, and a Gradle file. 
+
 We implemented the Jetbrains custom language plugin tutorial. There may be portability issues with DevKit, so we utilized Gradle instead. It compiles a plugin that allows for syntax highlighting of "properties" files with the .simple filetype.
 
 ### Authors:
@@ -19,4 +21,9 @@ Andrea Nosler
 4. Check **"Use auto import"** and **"Create directories for empty content roots automatically"**
 5. Choose the Gradle install location as Gradle home
 6. After loading, open the Gradle tab on the right-hand side
-7. Execute the **runIde** Gradle task
+    - At this point you can test the plugin via the **runIde** Gradle task, which will open a new IDE window with the plugin already installed
+7. Execute the **buildPlugin** Gradle task
+8. Open **Files** > **Settings** > **Plugins**
+9. Select the gear, then **"Install Plugin from Disk"**
+10. Browse to ``simple_language_plugin/build/libs``, and import ``simple_language_plugin-X.Y.jar``
+11. Restart IntelliJ IDEA
