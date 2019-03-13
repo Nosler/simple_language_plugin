@@ -19,6 +19,7 @@ CRLF=\R
 WHITE_SPACE=[\ \n\t\f]
 FIRST_VALUE_CHARACTER=[^ \n\f\\] | "\\"{CRLF} | "\\".
 VALUE_CHARACTER=[^\n\f\\] | "\\"{CRLF} | "\\".
+// Here's an example of something we can do in the flex file! An implementation of individually signed comments:
 END_OF_LINE_COMMENT=("#"|"!"|"Sam:"|"Andi:")[^\r\n]*
 SEPARATOR=[:=]
 KEY_CHARACTER=[^:=\ \n\t\f\\] | "\\ "
